@@ -1,0 +1,209 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --grey : #6b7280;
+
+    --light:#EEE;
+    --pink: #bad427;
+    --purple:#f65c5c;
+    --green: #0cf733;
+
+
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    font-family:Arial, Helvetica, sans-serif
+}
+body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    /* viewport height : make sure it covers the entire page */
+    background: var(--dark);
+    color:#FFF
+}
+header{
+    
+    padding: 2em;
+    width:100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+header h1{
+    font-weight: 700;
+        background-image: linear-gradient(0deg, var(--purple),var(--pink));
+
+        -webkit-background-clip: text;
+
+
+        -webkit-text-fill-color:transparent;
+        /* font-weight: 200;    */
+        /* color :var(--grey); */
+        font-size: 300;
+        margin-bottom: 1rem;
+}
+#new-task-form{
+    display: flex;
+}
+input,button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background:none ;
+}
+#new-task-input{
+    background-color: var(--darker);
+    border-radius: 1rem;
+
+    padding:1rem;
+    flex: 1 1 0%;
+    color: var(--light);
+    margin-right: 1em;
+    font-size: 1.25rem;
+}
+#new-task-input::placeholder{
+    color: var(--grey);
+}
+#new-task-submit{
+color: var(--pink);
+font-size: large;
+font-weight: 700;
+background-image: linear-gradient(to right, var(--pink), var(--purple));
+-webkit-background-clip: text;
+
+-webkit-text-fill-color:transparent;
+cursor: pointer;
+transition: 0.4s;
+
+}
+#new-task-submit:hover{
+    opacity: 0.5;
+    background-image: linear-gradient(to right, var(--purple), var(--pink));
+}
+#new-task-submit:active{
+    /* opacity: 0.5; */
+    background-image: linear-gradient(to right, var(--purple), var(--purple));
+}
+main{
+    flex: 1 1 0%;
+    padding: 2em 1em;
+    width: 100%; 
+    max-width: 900px;
+    margin: 0 auto;
+   
+}   
+#tasks{
+    margin-bottom: 3em;
+}
+.task-list{
+   
+    padding:1rem 
+}
+.task-list h2{
+    font-weight: 700;
+    background-image: linear-gradient(0deg, var(--purple),var(--pink));
+
+    -webkit-background-clip: text;
+
+
+    -webkit-text-fill-color:transparent;
+    /* font-weight: 200;    */
+    /* color :var(--grey); */
+    font-size: 300;
+    margin-bottom: 1rem;
+}
+
+#tasks .task{
+    display: flex;
+   
+    justify-content: space-between;
+    background-color: var(--darkest);
+    border-radius: 1rem;
+
+    padding:1rem;
+    
+    color: var(--light);
+    margin-right: 1em;
+    font-size: 1.25rem; 
+    margin-bottom: 1em;
+
+}
+
+#tasks .task .content .text{
+    color: var(--light);
+    
+    font-size:1.125rem;
+    width:100%;
+    display:block;
+
+
+
+}
+.content{
+    width:70%;
+
+}
+#tasks .task .content .text:not(:read-only){
+    color: var(--purple);
+}
+
+#tasks .task .actions .edit{
+    
+    color: var(--pink);
+font-size: large;
+font-weight: 700;
+background-image: linear-gradient(to right, var(--pink), var(--purple));
+-webkit-background-clip: text;
+padding-right: 1em;
+-webkit-text-fill-color:transparent;
+cursor: pointer;
+transition: 0.4s;
+}
+#tasks .task .actions .delete{
+    color: var(--pink);
+font-size: large;
+font-weight: 700;
+padding-right: 1em;
+color:crimson;
+cursor: pointer;
+transition: 0.4s;
+}
+#tasks .task .actions .done{
+    color: var(--pink);
+font-size: large;
+font-weight: 700;
+background-image: linear-gradient(to right, var(--green), var(--pink));
+-webkit-background-clip: text;
+
+-webkit-text-fill-color:transparent;
+cursor: pointer;
+transition: 0.4s;
+}
+#tasks .task .actions .edit:hover{
+    opacity: 0.5;
+    background-image: linear-gradient(to right, var(--purple), var(--pink));
+
+}
+#tasks .task .actions .delete:hover{
+    opacity: 0.5;
+    
+
+}
+#tasks .task .actions .done:hover{
+    opacity: 0.5;
+    background-image: linear-gradient(to right, var(--pink), var(--green));
+
+}
+ #done{
+    
+    opacity: 50%;
+    /* background-color: #0cf733;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color:transparent; */
+    text-decoration: line-through;
+    
+}
